@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 1124px;
+    height: 438px;
+    margin: 30px auto 0;
+    background: #d3be90;
+    display: flex;
+}
+
+.div{
+    width: 86px;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear; /* Firefox 4 */
+    -webkit-transition: all 0.3s linear; /* Safari 和 Chrome */
+    -o-transition: all 0.3s linear; /* Opera */
+}
+
+.div img{
+    width: 100px;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear; /* Firefox 4 */
+    -webkit-transition: all 0.3s linear; /* Safari 和 Chrome */
+    -o-transition: all 0.3s linear; /* Opera */
+}
+
+.div:nth-of-type(1){
+    background: url("../image/page4-pic1-on_09f7fb3.jpg") no-repeat;
+}
+.div:nth-of-type(2){
+    background: url("../image/page4-pic2-on_d943803.jpg") no-repeat;
+}
+.div:nth-of-type(3){
+    background: url("../image/page4-pic3-on_a2b5e12.jpg") no-repeat;
+}
+.div:nth-of-type(4){
+    background: url("../image/page4-pic4-on_6d78fc8.jpg") no-repeat;
+}
+.div:nth-of-type(5){
+    background: url("../image/page4-pic5-on_80b1d96.jpg") no-repeat;
+}
+
+
+.show{
+    width: 780px;
+}
+.show img{
+    opacity: 0;
+
+}
