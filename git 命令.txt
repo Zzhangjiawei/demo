@@ -1,4 +1,4 @@
-git 同一个仓库 上传多个 项目
+	●git 同一个仓库 上传多个 项目
 
 新建文件夹，存放多个项目  
 如：E:/github
@@ -7,7 +7,7 @@ git 同一个仓库 上传多个 项目
 
 git init 			//初始化 git 文件
 git add . 			//上传文件
-git commit -m "描述" 		//描述
+git commit -m "描述" 		//添加描述信息
 git remote add origin https://github.com/Zzhangjiawei/demo.git // 上传到git仓库
 git push -u origin master       // 奖本地分支推送到仓库分支上
 
@@ -15,4 +15,16 @@ git push -u origin master       // 奖本地分支推送到仓库分支上
 git add . 			//上传文件
 git commit -m "描述" 		//描述
 git push -u origin master       // 奖本地分支推送到仓库分支上
+
+
+===================================================================================
+
+	●删除 github 里面的 文件夹
+打开存放项目的文件夹。并进入 github 命令界面
+dir  				//查看有哪些文件夹
+git rm -r --cached 练习		//删除练习文件夹
+git commit -m "描述"		//添加描述信息
+git push -u origin master	//将本次更改，更新到 github 项目上去
+
+=====================================================================================
 
