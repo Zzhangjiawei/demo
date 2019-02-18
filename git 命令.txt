@@ -1,0 +1,18 @@
+git 同一个仓库 上传多个 项目
+
+新建文件夹，存放多个项目  
+如：E:/github
+进入 git 操作
+先上传一个文件项目 
+
+git init 			//初始化 git 文件
+git add . 			//上传文件
+git commit -m "描述" 		//描述
+git remote add origin https://github.com/Zzhangjiawei/demo.git // 上传到git仓库
+git push -u origin master       // 奖本地分支推送到仓库分支上
+
+在上传一个文件项目
+git add . 			//上传文件
+git commit -m "描述" 		//描述
+git push -u origin master       // 奖本地分支推送到仓库分支上
+
