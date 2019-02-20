@@ -22,7 +22,7 @@
     // var d = c.slice(1,3);        // 选取数组下标中的一段值，包头不包尾 console.log(c.slice(1,3))   结果；[22, 31]
     // var d =  c.join(",");        // 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。  console.log( c.join("#"))  结果：17#22#31#15#7#66
     // var d = c.toString();        // 把数组转换为字符串，并返回结果。 console.log(c.toString())  结果；17,22,31,15,7,66
-    console.log(c);
+    // console.log(c);
     // console.log(d);
 
     
@@ -34,6 +34,28 @@
     // console.log(arr.sort(sorts)) //sort() 是默认排序 [1, 12, 3, 32, 5, 64, 78, 9]，添加函数做判断 [1, 3, 5, 9, 12, 32, 64, 78]
     
 
+
+    // 获取当前页面 url 的路径。并拿里面的值做判断
+   /*
+    var url = document.location.toString(); //获取页面的 url
+    var arrUrl = url.split("/");  // 字符串 转 数组
+    // console.log(arrUrl)
+    var _exist=$.inArray('p',arrUrl);  // 判断值（p）是否存在，存在返回值的下标，不存在则返回 -1。
+    // console.log(arrUrl[_exist+1]);
+    var new_string = arrUrl[_exist+1].substr(0,1); //截取第一个值
+    if(new_string >= 6){
+        $(".page_moban, .myPOP").show();
+    }
+    else{
+        $(".page_moban, .myPOP").hide();
+    }
+    // 点击关闭
+    $("#page_moban_del").bind("click",function(){
+        arrUrl[_exist+1] = '5.html';  // 重新赋值
+        var new_href = arrUrl.join("/"); // 数组转字符串。重新变成 url路径
+        $(this).attr("href",new_href);
+    });
+    */
 
 
 </script>
