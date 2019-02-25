@@ -1,0 +1,47 @@
+*{margin: 0;padding:0}
+ul,li,ol{list-style: none}
+
+.uls{
+    width: 420px;
+    /*height: 300px;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 50px auto 0;
+    background: red;
+}
+.uls li{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 48px;
+    box-sizing: border-box;
+    border: 1px #000 solid;
+    margin: 0 5px 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*签到 按钮*/
+.btn{
+    width: 100px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px #000 solid;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/*已签到样式*/
+.qiandao{
+    background: #00a2d4;
+    color: #fff5d4;
+}
+/*签到 天数*/
+.yiqiandao_text{
+    text-align: center;
+}
