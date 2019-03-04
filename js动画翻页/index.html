@@ -32,13 +32,12 @@
 
     $("button").bind("click",function(){
         var box = $(".box");
-        var div = $(`<div style="position: absolute;left: 1000px;top: 0;width: 1px;height: 600px;background-image:url('${nextPageImg}');border: 1px #ccc solid;box-sizing: border-box;background-repeat: repeat-y;background-position: -200px 0px"></div>`);
+        var div = $(`<div style="position: absolute;left: 1000px;top: 0;width: 1px;height: 600px;background-image:url('${nextPageImg}');border: 1px #ccc solid;box-sizing: border-box;background-repeat: repeat-y;background-position-x: 100%;"></div>`);
         box.append(div);
         div.animate({
             left: "0px",
             width: "500px",
-            backgroundPositionX: "350px",
-            backgroundPositionY: "0px"
+
         },1000,function(){
            div.fadeOut(300,function(){
                div.remove()
