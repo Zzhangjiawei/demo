@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        position: relative;
+        width: 1000px;
+        height: 600px;
+        box-sizing: border-box;
+        border: 1px solid #000000;
+        margin: 100px auto 0px;
+    }
+</style>
+<body>
+
+<div class="box">
+
+</div>
+
+<div class="aaa">按钮</div>
+<button>翻页</button>
+
+
+
+
+<script src="jquery.min.js"></script>
+<script>
+    var nextPageImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAABlCAYAAAAial0BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDNFNEFFODg2QUZDMTFFNEJCNTRGQjU4MDA3MkZGQzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDNFNEFFODk2QUZDMTFFNEJCNTRGQjU4MDA3MkZGQzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEM0U0QUU4NjZBRkMxMUU0QkI1NEZCNTgwMDcyRkZDMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEM0U0QUU4NzZBRkMxMUU0QkI1NEZCNTgwMDcyRkZDMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqMx45EAAAT4SURBVHja7J0LbhsxDEQzuv/VciY2bYMiKBJ7beszJB8Bw8Y60ZLUDD+7llYR8XZL3t/f9flRn6+vn28de+U1LhwfF78bF47NfP/3+cOz0n/Hvvu7+9/H+DvUj99/vOvBMW8em/T+R697c/DIXF7ByLOve7h++/L+sow3ZJlo20jffR82Hgg3tVZIQDxkMu3raOJj5GbimYS72KlfXD9HANAuSBztvB631NAGm9U8NcD/nqUm4O6TXY3dS49HyE/CxsjvXohHkvr+BEoM5VxkhXiJgrHSn4C+4gzxqvYVKsx2msNpboljxOPCxkTY6pCCKuXFndOhTqVm5Jufs1prg06xx4vOfi5PPO1Gy4y5nHWRIzw96VP5COKVobCM8EBpbytLiEf7jSAHiFcq0Eb5EyKUmg6gjcNRRHVdi1Ql3skGqzgy6RchnmdYV0GbzLUPiEdYx6b92gvipYiX8dBfk7MogCDelHiZe+cSpJLjKTXvUEx7TkO+bJYA09xAjypw4vZEWkppP/Hi+FRr+TkAaF/SaTZHZxEPUFK90cjNpMIArL91iyPOR/rG1n3EkzEPJb+ZQUqXI8euaqZPGuoLoWgwMapKPLLI1JafoJlMBjP6E/kDcBtE4KhnkhHxwpH8qmNTOmW1JwDFEZOMiMdvk1H2BF8Oms1PxloWcMQ0ery2AA0A2xhQoza4nQEKDV4BSmQCm4yIB+yQV4CiDWAL1uMhjhVHGOmyYnDZrsfjhne1RHKkapG7oXbEE0xEuDhgUGrSueXHo/nONKrBSHo8SscHR/LemSaScJEeDylV6WSpuUZdK8NcjcM70wTx4CQEBl5f7HHt1O+BnWlox48ikR6PuqdN8VGn1MS/yNMByHoTnlzEI8CTpK6fwBktWu4xSk0YcSaIlovSgnil6151cmbd5mX5fbxoBdCqsUeHFFQpL84jnsC/c3yWu9Y7fv4Ve7z4qCJjpXGRGbVtkqxq6yRPm8ZK47IvVkQo0VeNMXYqs2Jw8ehxxDDfahbxOi5WnGsTTERml5pgrGl06VM6XhspDhNPMBKpGPLmrVUcJ1wQHbhIjEFukHX4qEKYbRcVGq9VHAC0Y4JireLptYr8SLpTFsbhNgLxyKgIxKsLZTIqQbQI8VSerIjn9Ko38cg71L0O0xuniEcWedYtrFWsEHu0iHiNFyuung/WKronx3Vaj+c1rL9YEXFMsrFvKmdtyDT3ibD1FysiiSls/hwy7uNR3iEHBOKRG4giB04I8RBT0MbhKCJT4lHHIJYNVg5gDtOAgJAxiwFzxfZ+LlNCFiZjJrFplJoSsnCKcGn+lPUtenFxhb52e7jM/ZR1iJfK8wHLKT6XEs8dL7HgXy9s5yFTqEHvKsRzD01a8K9K5oOnVYWmlJpEewo+iAeMiDYzdAuIhxTNjjK265kn0ATEgzJk/ZIGhCvxosHM8OjxvpWOXIlHy10sHVnt5hElpyBJqRn1gnGg0zXEq56f8xBPe4JxHDGJDNvQphIXVwLgIcnwWoJ48KUuQCvW13rjPl77Xsq5Z1ahs+QvNWMCgKIFoqgWjCUf8TQBQE+iLbi/hTgSL8zGmT24cmzngXQjnszGaVNbCSZSahLt6dwaS8wjnvnWNIKRSL6QN14fyntrmujARWIMpaZbqdOi6LI2MszViA0ni4I9XkKABk7f73Dt1O/+Jjy/BBgAwM4ZPosCxGcAAAAASUVORK5CYII=";
+
+    $("button").bind("click",function(){
+        var box = $(".box");
+        var div = $(`<div style="position: absolute;left: 1000px;top: 0;width: 1px;height: 600px;background-image:url('${nextPageImg}');border: 1px #ccc solid;box-sizing: border-box;background-repeat: repeat-y;background-position: -200px 0px"></div>`);
+        box.append(div);
+        div.animate({
+            left: "0px",
+            width: "500px",
+            backgroundPositionX: "350px",
+            backgroundPositionY: "0px"
+        },1000,function(){
+           div.fadeOut(300,function(){
+               div.remove()
+           })
+        })
+    });
+
+
+        //下一页
+    $(".aaa").on("click",function(){
+        var box = $(".box");
+        var nextRoll = $('<div style="position:absolute;left:1000px;top:0px;height:600px;width:1px;border:1px solid #999;background-image:url(' + nextPageImg + ');background-repeat:repeat-y;background-color:#fff;background-position:-200px 0px;"></div>');
+        nextRoll.appendTo(box);
+        nextRoll.animate({
+            left: "0px",
+            width: "500px",
+            backgroundPositionX: "350px",
+            backgroundPositionY: "0px"
+        }, 1000,function(){
+            nextRoll.remove()
+        });
+    })
+
+
+
+</script>
+
+</body>
+</html>
