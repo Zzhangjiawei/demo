@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="css/jquery.lightbox-0.5.css">
+<style>
+    .box img{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+
+
+<div class="box" id="element_id">
+    <a href="image/big-1.jpg" title="123"><img src="image/big-1.jpg" alt=""></a>
+    <a href="image/big-2.jpg" title="456"><img src="image/big-2.jpg" alt=""></a>
+    <a href="image/big-3.jpg" title="789"><img src="image/big-3.jpg" alt=""></a>
+    <a href="image/big-4.jpg" title="000"><img src="image/big-4.jpg" alt="" data-lightbox="roadtrip"></a>
+    <a href="image/big-5.jpg" title="zzzz"><img src="image/big-5.jpg" alt="" data-lightbox="roadtrip"></a>
+
+</div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.lightbox-0.5.js"></script>
+<script>
+    // $('#element_id a').lightBox({
+    //     overlayBgColor : "#f00",
+    //     overlayOpacity: 0.4,//设置背景的透明度
+    // });
+
+    $('#element_id a').lightBox();
+    // lightBox 的使用范围是根据 jQuery 选择器来设置的，所以可以有更多的设置方法，例如：
+    // $('a.lightbox').lightBox();
+    // $('a[@rel*=lightbox]').lightBox();
+
+
+</script>
+</body>
+</html>

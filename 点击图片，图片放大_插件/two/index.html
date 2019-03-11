@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*  隐藏下面图片数字 和 标题，描述*/
+    .thecaption{
+        /*display: none;*/
+    }
+</style>
+
+<!--<link rel="stylesheet" href="css/jkresponsivegallery.css">-->
+
+<!--<script src="js/jkresponsivegallery.js"></script>-->
+<!--<script src="js/jquery.touchSwipe.min.js"></script>-->
+
+<link rel="stylesheet" href="css/jkresponsivegallery.css">
+
+
+<body>
+
+<!--  组图   -->
+<div class="dowebok">
+    <div class="rthumbnail">
+        <a href="image/legs.jpg">
+            <img src="image/legs.jpg" width="150" height="112" border="0">
+        </a>
+        <div  class="rcaption">一对鸟在看日出 <a href="###">一个链接</a></div>
+    </div>
+
+    <div class="rthumbnail">
+        <a href="image/tropical.jpg">
+            <img src="image/tropical.jpg" width="150" height="112" border="0">
+        </a>
+        <div class="rcaption">标题/描述</div>
+    </div>
+
+    <div class="rthumbnail">
+        <a href="image/waterdrop.jpg">
+            <img src="image/waterdrop.jpg" width="150" height="112" border="0">
+        </a>
+        <div class="rcaption">标题/描述</div>
+    </div>
+
+    <div class="rthumbnail">
+        <a href="image/fisherman.jpg">
+            <img src="image/fisherman.jpg" width="150" height="112" border="0">
+        </a>
+        <div class="rcaption">标题/描述</div>
+    </div>
+</div>
+
+
+
+<!--  文字链接    -->
+<div class="dowebok">
+    <ul id="gallerys">
+        <li><a href="image/tropical.jpg" title="标题/描述">图片1</a></li>
+        <li><a href="image/legs.jpg" title="标题/描述">图片2</a></li>
+        <li><a href="image/fisherman.jpg" title="标题/描述">图片3</a></li>
+        <li><a href="image/waterdrop.jpg" title="标题/描述">图片4</a></li>
+    </ul>
+</div>
+
+
+
+<!--  JS  动态添加数据   -->
+<div class="dowebok">
+    <div id="gallery" class="">
+        <a href="image/legs.jpg">
+            <img src="image/legs_thumb.jpg" width="150" height="112"></a>
+        <div  class="rcaption" style="display: none">一对鸟在看日出 <a href="####">一个链接</a></div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jkresponsivegallery.js"></script>
+<script>
+
+    $(function() {
+
+         // 组图 初始话
+        $(".rthumbnail").responsivegallery({
+            autoclose : false  /* 循环  默认 true 关*/
+        });
+
+
+
+        //<!--  J文字链接    -->
+        $('#gallerys a').responsivegallery({
+            autoclose: false /* 循环  默认 true 关*/
+        });
+
+
+        /* JS 动态添加数据 并初始胡 */
+        $('#gallery').responsivegallery({
+            media: [
+                ["image/tropical.jpg", "标题/描述"],
+                ["image/legs.jpg", "标题/描述"],
+                ["image/fisherman.jpg", "标题/描述"]
+            ],
+            autoclose : false  /* 循环  默认 true 关*/
+        });
+
+    });
+</script>
+
+
+</body>
+</html>
