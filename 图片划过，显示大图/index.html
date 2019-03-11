@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        display: inline-block;
+    }
+
+
+</style>
+<body>
+
+<div class="box">
+    <a href="http://www.yjzx.com">
+        <img src="http://www.yjzx.com/images/../AuctionImages/20190118/list_68_0_1547803630.jpg" width="108" height="108">
+        <!--<img src="http://www.yjzx.com/images/../AuctionImages/20190118/medium_68_0_1547803630.jpg" width="108" height="108">-->
+    </a>
+</div>
+
+
+<script src="../jquery.min.js"></script>
+<script>
+
+
+    var count = 0;
+    var pageId = '';
+    $(function (){
+        var x = 10;
+        var y = -10;
+        var docH=$(document).height();
+        var docCH=document.documentElement.clientHeight;
+        // console.log(docH,docCH);
+        $(".box").mouseover(function(e){
+            // console.log(e)
+            // var size = $(this).find('a').attr('href');
+            // console.log(size)
+          /*  size = size ? size.indexOf('list') != -1 ? '_S1':'_M' : '_M';
+            console.log(size)*/
+            var _src = $(this).find('img').attr('src');
+            // console.log(_src);
+            re = new RegExp("list","g");
+            var _src = _src.replace(re,"medium");
+            console.log(_src)
+            // _src = _src.replace('_SS',size);
+           /* if(_src.indexOf("list")){
+                console.log(_src.indexOf("list")+4)
+                _src = _src.splice(_src.indexOf("list")+4, 'medium' )
+
+            }else{
+                console.log(_src.indexOf("list"))
+            }*/
+            // console.log(_src)
+
+
+            var tooltip = "<div id='tooltip' style='position: absolute;z-index:9999999;'><img src='"+ _src +"' alt='' width='400' height='400'/><\/div>"; //创建 div 元素
+            $("body").append(tooltip);
+            var imgH=$(this).find('img').height();
+            var imgW=$(this).find('img').width();
+            var scrollTop=$(document).scrollTop();
+            // console.log(imgH,imgW,scrollTop)
+            var H,W;
+            if(imgH/imgW>=1){
+                H=400;
+                W=H*imgW/imgH;
+            }else{
+                W=400;
+                H=W*imgH/imgW;
+            }
+            var offsetTop=$(this).offset().top;
+            if(docCH-(e.pageY-scrollTop)<H){
+                CH=docCH-H+scrollTop+y;
+            }else{
+                CH=0;
+            }
+            $("#tooltip")
+                .css({
+                    "top": (CH ? CH : (e.pageY+y)) + "px",
+                    "left":  (e.pageX+x)  + "px"
+                }).show("fast");
+        }).mouseout(function(){
+            // this.title = this.myTitle;
+            $("#tooltip").remove();
+        }).mousemove(function(e){
+            // console.log(e.pageX + ", " + e.pageY)
+            var imgH=$(this).find('img').height();
+            var imgW=$(this).find('img').width();
+            var scrollTop=$(document).scrollTop();
+            // console.log(imgH,imgW,scrollTop)
+            var H,W;
+            if(imgH/imgW>=1){
+                H=400;
+                W=H*imgW/imgH;
+            }else{
+                W=400;
+                H=W*imgH/imgW;
+            }
+            if(docCH-(e.pageY-scrollTop)<H){
+                CH=docCH-H+scrollTop+y;
+            }else{
+                CH=0;
+            }
+            $("#tooltip")
+                .css({
+                    "top": (CH ? CH : (e.pageY+y)) + "px",
+                    "left":  (e.pageX+x)  + "px"
+                }).show("fast");
+        })
+        // $("img").each(function (i,e){
+        //     $(e).attr("onerror",function(){
+        //         $(e).attr("alt","");
+        //     });
+        // });
+
+    })
+
+   /* $(function(){
+        // 禁止IE缓存
+        // $.ajaxSetup({ cache: false });
+
+        var x = 10;
+        var y = -10;
+        var docH=$(document).height();
+        var docCH=document.documentElement.clientHeight;
+        // console.log(docH,docCH);
+        $(".img").mouseover(function(e){
+            console.log(e)
+            var size = $(this).parent().find('a').attr('href');
+            console.log(size)
+            size = size ? size.indexOf('shuhua') != -1 ? '_S1':'_M' : '_M';
+            this.myTitle = this.title;
+            this.title = "";
+            var imgTitle = this.myTitle? "<br/>" + this.myTitle : "";
+            var _src = $(this).find('img').attr('src');
+            _src = _src.replace('_SS',size);
+            _src = _src.replace(/(http.+com(:\d+)?\/\w+)~(\d+x\d+)/, "$1~400x400")
+            _src = _src.replace('@0e_0o_1l_26h_34w_90q.src', '@0e_0o_1l_400h_400w_90q.src')
+            _src = _src.replace('!34x26', '!400x400')
+            var tooltip = "<div id='tooltip' style='z-index:9999999;'><img src='"+ _src +"' alt=''/>"+imgTitle+"<\/div>"; //创建 div 元素
+            $("body").append(tooltip);
+            var imgH=$(this).find('img').height();
+            var imgW=$(this).find('img').width();
+            var scrollTop=$(document).scrollTop();
+            var H,W;
+            if(imgH/imgW>=1){
+                H=400;
+                W=H*imgW/imgH;
+            }else{
+                W=400;
+                H=W*imgH/imgW;
+            }
+            var offsetTop=$(this).offset().top;
+            if(docCH-(e.pageY-scrollTop)<H){
+                CH=docCH-H+scrollTop+y;
+            }else{
+                CH=0;
+            }
+            $("#tooltip")
+                .css({
+                    "top": (CH ? CH : (e.pageY+y)) + "px",
+                    "left":  (e.pageX+x)  + "px"
+                }).show("fast");
+        }).mouseout(function(){
+            this.title = this.myTitle;
+            $("#tooltip").remove();
+        }).mousemove(function(e){
+            var imgH=$(this).find('img').height();
+            var imgW=$(this).find('img').width();
+            var scrollTop=$(document).scrollTop();
+            var H,W;
+            if(imgH/imgW>=1){
+                H=400;
+                W=H*imgW/imgH;
+            }else{
+                W=400;
+                H=W*imgH/imgW;
+            }
+            var offsetTop=$(this).offset().top;
+            if(docCH-(e.pageY-scrollTop)<H){
+                CH=docCH-H+scrollTop+y;
+            }else{
+                CH=0;
+            }
+            $("#tooltip")
+                .css({
+                    "top": (CH ? CH :(e.pageY+y)) + "px",
+                    "left":  (e.pageX+x)  + "px"
+                });
+        });
+        $("img").each(function (i,e){
+            $(e).attr("onerror",function(){
+                $(e).attr("alt","");
+            });
+        });
+    });*/
+
+
+
+
+</script>
+</body>
+</html>
