@@ -6,7 +6,7 @@
 先上传一个文件项目 
 
 git init 			//初始化 git 文件
-git add . 			//上传文件
+git add . 			//上传所有文件，add后面有个点
 git commit -m "描述" 		//添加描述信息
 git remote add origin https://github.com/Zzhangjiawei/demo.git // 上传到git仓库
 git push -u origin master       // 奖本地分支推送到仓库分支上
@@ -19,12 +19,35 @@ git push -u origin master       // 奖本地分支推送到仓库分支上
 
 ===================================================================================
 
-	●删除线上 github 仓库里面的文件夹，但本地电脑还保留该文件夹
+	●删除 github 里面的 文件夹
 打开存放项目的文件夹。并进入 github 命令界面
 dir  				//查看有哪些文件夹
-git rm -r --cached 练习		//删除练习文件夹
-git commit -m "描述"		//添加描述信息
+git rm -r --cached git\ 命令.txt		//删除练习文件夹
+git com
+mit -m "描述"		//添加描述信息
 git push -u origin master	//将本次更改，更新到 github 项目上去
 
 =====================================================================================
+
+	●下载，克隆
+git clone https://github.com/Zzhangjiawei/demo.git
+
+
+	●更新内容
+先下载，并修改
+
+git add .			//上传所有文件，add后面有个点  
+git commit -m "备注说明"
+git push -u origin master       // 奖本地分支推送到仓库分支上
+
+
+
+
+
+
+
+
+
+
+
 
