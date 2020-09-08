@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/jquery.lightbox-0.5.css">
+    <link rel="stylesheet" href="../../Public/css/Public_Left.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.lightbox-0.5.js"></script>
+    <style>
+        .box img{
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+        });
+    </script>
 </head>
-<link rel="stylesheet" href="css/jquery.lightbox-0.5.css">
-<style>
-    .box img{
-        width: 150px;
-        height: 150px;
-        cursor: pointer;
-    }
-
-</style>
-<body>
 
 
-<div class="box" id="element_id">
-    <a href="image/big-1.jpg" title="123"><img src="image/big-1.jpg" alt=""></a>
-    <a href="image/big-2.jpg" title="456"><img src="image/big-2.jpg" alt=""></a>
-    <a href="image/big-3.jpg" title="789"><img src="image/big-3.jpg" alt=""></a>
-    <a href="image/big-4.jpg" title="000"><img src="image/big-4.jpg" alt="" data-lightbox="roadtrip"></a>
-    <a href="image/big-5.jpg" title="zzzz"><img src="image/big-5.jpg" alt="" data-lightbox="roadtrip"></a>
+<body class="PublicBody">
 
-</div>
+    <div class="left"></div>
 
+    <div class="right">
+        <div class="box" id="element_id">
+            <a href="image/big-1.jpg" title="123"><img src="image/big-1.jpg" alt=""></a>
+            <a href="image/big-2.jpg" title="456"><img src="image/big-2.jpg" alt=""></a>
+            <a href="image/big-3.jpg" title="789"><img src="image/big-3.jpg" alt=""></a>
+            <a href="image/big-4.jpg" title="000"><img src="image/big-4.jpg" alt="" data-lightbox="roadtrip"></a>
+            <a href="image/big-5.jpg" title="zzzz"><img src="image/big-5.jpg" alt="" data-lightbox="roadtrip"></a>
+        </div>
+    </div>
 
-
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.lightbox-0.5.js"></script>
 <script>
     // $('#element_id a').lightBox({
     //     overlayBgColor : "#f00",

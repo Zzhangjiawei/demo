@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../Public/css/Public_Left.css">
+    <script src="../Public/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+        });
+    </script>
 </head>
-<body>
-<input type="hidden" value="0" class="off">
-<div id="schedule-box">
-    <ul class="uls"></ul>
-    <div class="btn">签到</div>
-    <div class="yiqiandao_text"></div>
-</div>
+<body class="PublicBody">
 
+    <div class="left"></div>
 
+    <div class="right">
+        <input type="hidden" value="0" class="off">
+        <div id="schedule-box">
+            <ul class="uls"></ul>
+            <div class="btn">签到</div>
+            <div class="yiqiandao_text"></div>
+        </div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/index.js"></script>
 <script>
 

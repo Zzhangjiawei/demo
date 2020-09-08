@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.Public_Left{
+    width: 250px;
+}
 .Public_Left p{
     height: 30px;
     line-height: 30px;

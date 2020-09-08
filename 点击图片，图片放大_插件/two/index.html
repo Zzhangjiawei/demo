@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../../Public/css/Public_Left.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jkresponsivegallery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+        });
+    </script>
 </head>
 <style>
     /*  隐藏下面图片数字 和 标题，描述*/
@@ -19,64 +27,66 @@
 <link rel="stylesheet" href="css/jkresponsivegallery.css">
 
 
-<body>
+<body class="PublicBody">
 
-<!--  组图   -->
-<div class="dowebok">
-    <div class="rthumbnail">
-        <a href="image/legs.jpg">
-            <img src="image/legs.jpg" width="150" height="112" border="0">
-        </a>
-        <div  class="rcaption">一对鸟在看日出 <a href="###">一个链接</a></div>
+    <div class="left"></div>
+
+    <div class="right">
+        <!--  组图   -->
+        <div class="dowebok">
+            <div class="rthumbnail">
+                <a href="image/legs.jpg">
+                    <img src="image/legs.jpg" width="150" height="112" border="0">
+                </a>
+                <div  class="rcaption">一对鸟在看日出 <a href="###">一个链接</a></div>
+            </div>
+
+            <div class="rthumbnail">
+                <a href="image/tropical.jpg">
+                    <img src="image/tropical.jpg" width="150" height="112" border="0">
+                </a>
+                <div class="rcaption">标题/描述</div>
+            </div>
+
+            <div class="rthumbnail">
+                <a href="image/waterdrop.jpg">
+                    <img src="image/waterdrop.jpg" width="150" height="112" border="0">
+                </a>
+                <div class="rcaption">标题/描述</div>
+            </div>
+
+            <div class="rthumbnail">
+                <a href="image/fisherman.jpg">
+                    <img src="image/fisherman.jpg" width="150" height="112" border="0">
+                </a>
+                <div class="rcaption">标题/描述</div>
+            </div>
+        </div>
+
+
+
+        <!--  文字链接    -->
+        <div class="dowebok">
+            <ul id="gallerys">
+                <li><a href="image/tropical.jpg" title="标题/描述">图片1</a></li>
+                <li><a href="image/legs.jpg" title="标题/描述">图片2</a></li>
+                <li><a href="image/fisherman.jpg" title="标题/描述">图片3</a></li>
+                <li><a href="image/waterdrop.jpg" title="标题/描述">图片4</a></li>
+            </ul>
+        </div>
+
+
+
+        <!--  JS  动态添加数据   -->
+        <div class="dowebok">
+            <div id="gallery" class="">
+                <a href="image/legs.jpg">
+                    <img src="image/legs_thumb.jpg" width="150" height="112"></a>
+                <div  class="rcaption" style="display: none">一对鸟在看日出 <a href="####">一个链接</a></div>
+            </div>
+        </div>
     </div>
 
-    <div class="rthumbnail">
-        <a href="image/tropical.jpg">
-            <img src="image/tropical.jpg" width="150" height="112" border="0">
-        </a>
-        <div class="rcaption">标题/描述</div>
-    </div>
-
-    <div class="rthumbnail">
-        <a href="image/waterdrop.jpg">
-            <img src="image/waterdrop.jpg" width="150" height="112" border="0">
-        </a>
-        <div class="rcaption">标题/描述</div>
-    </div>
-
-    <div class="rthumbnail">
-        <a href="image/fisherman.jpg">
-            <img src="image/fisherman.jpg" width="150" height="112" border="0">
-        </a>
-        <div class="rcaption">标题/描述</div>
-    </div>
-</div>
-
-
-
-<!--  文字链接    -->
-<div class="dowebok">
-    <ul id="gallerys">
-        <li><a href="image/tropical.jpg" title="标题/描述">图片1</a></li>
-        <li><a href="image/legs.jpg" title="标题/描述">图片2</a></li>
-        <li><a href="image/fisherman.jpg" title="标题/描述">图片3</a></li>
-        <li><a href="image/waterdrop.jpg" title="标题/描述">图片4</a></li>
-    </ul>
-</div>
-
-
-
-<!--  JS  动态添加数据   -->
-<div class="dowebok">
-    <div id="gallery" class="">
-        <a href="image/legs.jpg">
-            <img src="image/legs_thumb.jpg" width="150" height="112"></a>
-        <div  class="rcaption" style="display: none">一对鸟在看日出 <a href="####">一个链接</a></div>
-    </div>
-</div>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/jkresponsivegallery.js"></script>
 <script>
 
     $(function() {
@@ -106,7 +116,5 @@
 
     });
 </script>
-
-
 </body>
 </html>

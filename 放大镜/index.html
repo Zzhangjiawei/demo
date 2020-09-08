@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>仿淘宝放大镜特效</title>
+		<link rel="stylesheet" href="../Public/css/Public_Left.css">
+		<script src="../Public/js/jquery.min.js"></script>
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -57,42 +59,53 @@
 			}
 			
 		</style>
+		<script>
+            $(document).ready(function(){
+                $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+            });
+		</script>
 	</head>
-	<body>
-		<div class="magnifier" id="magnifier1">
-			<!-- 当前主图的承载容器 -->
-			<div class="image-preview-wrap">
-				<!-- 图片的容器 -->
-				<div class="control_show_hide" style="display: block;">
-					<!-- 跟随鼠标移动的容器 -->
-					<div class="move-view"></div>
-					<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_0_1562742786.jpg" alt="">
+	<body class="PublicBody">
+
+		<div class="left"></div>
+
+		<div class="right">
+			<div class="magnifier" id="magnifier1">
+				<!-- 当前主图的承载容器 -->
+				<div class="image-preview-wrap">
+					<!-- 图片的容器 -->
+					<div class="control_show_hide" style="display: block;">
+						<!-- 跟随鼠标移动的容器 -->
+						<div class="move-view"></div>
+						<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_0_1562742786.jpg" alt="">
+					</div>
+
+					<!-- 图片的容器 -->
+					<div class="control_show_hide">
+						<div class="move-view"></div>
+						<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_1_1562742787.jpg" alt="">
+					</div>
 				</div>
-				
-				<!-- 图片的容器 -->
-				<div class="control_show_hide">
-					<div class="move-view"></div>
-					<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_1_1562742787.jpg" alt="">
+
+				<!-- li 缩略图容器 -->
+				<div class="image-list-inner">
+					<ul>
+						<li class="cuurr">
+							<img src="http://images.yjzx.com/images/../AuctionImages/20190710/small_99_0_1562742786.jpg" alt="">
+						</li>
+						<li>
+							<img src="http://images.yjzx.com/images/../AuctionImages/20190710/small_99_1_1562742787.jpg" alt="">
+						</li>
+					</ul>
 				</div>
+
+				<!-- 图片放大后承载容器  -->
+				<div class="magnifier-view"></div>
 			</div>
-			
-			<!-- li 缩略图容器 -->
-			<div class="image-list-inner">
-				<ul>
-					<li class="cuurr">
-						<img src="http://images.yjzx.com/images/../AuctionImages/20190710/small_99_0_1562742786.jpg" alt="">
-					</li>
-					<li>
-						<img src="http://images.yjzx.com/images/../AuctionImages/20190710/small_99_1_1562742787.jpg" alt="">
-					</li>
-				</ul>
-			</div>
-			
-			<!-- 图片放大后承载容器  -->
-			<div class="magnifier-view"></div>
 		</div>
+
 	</body>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 	<script type="text/javascript">
             (function($){
                 var fnName = 'magnifier';

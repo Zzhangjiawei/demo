@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../Public/css/Public_Left.css">
+    <script src="../Public/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+        });
+    </script>
 </head>
-<body>
+<body class="PublicBody">
 
+<div class="left"></div>
 
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<div class="right"></div>
 <script>
-
-
-
 var url = 'http://localhost:8086/topic/index?topicId=361';
 
 // 设置或获取对象指定的文件名或路径。

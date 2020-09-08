@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../Public/css/Public_Left.css">
+    <script src="../Public/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+        });
+    </script>
 </head>
-<body>
+<body class="PublicBody">
 
-<a href="javascript:;" class="xiazai">点击下载</a>
+    <div class="left"></div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <div class="right">
+        <a href="javascript:;" class="xiazai">点击下载</a>
+    </div>
+
 <script>
     $(".xiazai").bind("click", function () {
         var u = navigator.userAgent, app = navigator.appVersion;

@@ -3,42 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+	<link rel="stylesheet" href="../Public/css/Public_Left.css">
+	<script src="jquery.min.js"></script>
+	<style>
+		.main{
+			display: flex;
+		}
+		.box{
+			margin: 10px;
+		}
+
+
+	</style>
+	<script>
+        $(document).ready(function(){
+            $(".left").load("https://zzhangjiawei.github.io/demo/Public/html/Left.html");
+        });
+	</script>
 </head>
-<style>
-	.main{
-		display: flex;
-	}
-    .box{
-        margin: 10px;
-    }
+
+<body class="PublicBody">
 
 
-</style>
-<body>
+<div class="left"></div>
 
-<div class="main">
-	<div class="box">
-	    <a href="javascript:;">
-	        <img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_0_1562742786.jpg" width="108" height="108">
-	    </a>
-	</div>
-	<div class="box">
-	    <a href="javascript:;">
-	        <img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_1_1562742787.jpg" width="108" height="108">
-	    </a>
-	</div>
-	<div class="box">
-	    <a href="javascript:;">
-	        <img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_1562749139.jpg" width="108" height="108">
-	    </a>
+<div class="right">
+	<div class="main">
+		<div class="box">
+			<a href="javascript:;">
+				<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_0_1562742786.jpg" width="108" height="108">
+			</a>
+		</div>
+		<div class="box">
+			<a href="javascript:;">
+				<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_99_1_1562742787.jpg" width="108" height="108">
+			</a>
+		</div>
+		<div class="box">
+			<a href="javascript:;">
+				<img src="http://images.yjzx.com/images/../AuctionImages/20190710/medium_1562749139.jpg" width="108" height="108">
+			</a>
+		</div>
 	</div>
 </div>
 
 
-<script src="jquery.min.js"></script>
+
+
 <script>
-
-
     var count = 0;
     var pageId = '';
     $(function (){
