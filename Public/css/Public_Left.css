@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Public_Left p{
+    height: 30px;
+    line-height: 30px;
+}
+.Public_Left a{
+    text-decoration: none;
+}
+
+.PublicBody{
+    display: flex;
+}
